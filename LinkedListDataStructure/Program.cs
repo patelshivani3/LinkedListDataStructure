@@ -12,7 +12,7 @@ namespace LinkedListDataStructure
         {
             Console.WriteLine("\nWelcome to Linked List Data Structure");
             LinkedList linkedList = new LinkedList();
-            Console.WriteLine("\n1.Linked List\n2.Add Linked List\n3.Append Linked List\n4.Insert Node in Linked List\n5.Delete First Node of Linked List\n6.Delete Last Node of Linked List");
+            Console.WriteLine("\n1.Linked List\n2.Add Linked List\n3.Append Linked List\n4.Insert Node in Linked List\n5.Delete First Node of Linked List\n6.Delete Last Node of Linked List\n7.Search Node in the Linked List");
             int option = Convert.ToInt32(Console.ReadLine());
             LinkedList linkedlist = new LinkedList();
             switch (option)
@@ -65,6 +65,15 @@ namespace LinkedListDataStructure
                     linkedlist.RemoveLast();
                     Console.WriteLine("-----------------------------------------");
                     linkedlist.Display();
+                    break;
+
+                case 7:
+                    linkedlist.AddLast(56);
+                    linkedlist.AddLast(30);
+                    linkedlist.AddLast(70);
+                    linkedlist.Display();
+                    Console.WriteLine("\n-----------------------------------------");
+                    linkedlist.Search(30);
                     break;
 
                 default:

@@ -92,7 +92,7 @@ namespace LinkedListDataStructure
                 Console.WriteLine("Removed first node");
             }
         }
-        public void RemoveLast()         //Remove last method for removing element
+        public void RemoveLast()         
         {
             if (head == null)
             {
@@ -111,6 +111,30 @@ namespace LinkedListDataStructure
                     }
                     temp.next = null;
                 }
+            }
+        }
+        public void Search(int input)          
+        {
+            bool isFound = false;
+            if (head == null)
+            {
+                Console.WriteLine("LinkedList is Empty");
+            }
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    if (temp.data == input)
+                    {
+                        isFound = true;
+                        Console.WriteLine("Given node {0} is present.", input);
+                        break;
+                    }
+                    temp = temp.next;
+                }
+                if (!isFound)
+                    Console.WriteLine("Given node {0} is not present", input);
             }
         }
     }
