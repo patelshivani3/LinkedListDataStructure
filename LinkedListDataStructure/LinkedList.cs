@@ -49,5 +49,25 @@ namespace LinkedListDataStructure
                 temp = temp.next;
             }
         }
+        public void Append(int data)         
+        {
+            AddLast(data);
+        }
+        public void DisplayAppend()          
+        {
+            Console.WriteLine("\nAfter appending the nodes");
+            if (head == null)
+                Console.WriteLine("LinkedList is Empty");
+            else
+            {
+                Node temp = head;
+                while (temp != null)
+                {
+                    Console.WriteLine(temp.data);
+                    temp = temp.next;
+                }
+            }
+        }
+        
     }
 }
