@@ -12,7 +12,7 @@ namespace LinkedListDataStructure
         {
             Console.WriteLine("\nWelcome to Linked List Data Structure");
             LinkedList linkedList = new LinkedList();
-            Console.WriteLine("\n1.Linked List\n2.Add Linked List\n3.Append Linked List");
+            Console.WriteLine("\n1.Linked List\n2.Add Linked List\n3.Append Linked List\n4.Insert Node in Linked List");
             int option = Convert.ToInt32(Console.ReadLine());
             LinkedList linkedlist = new LinkedList();
             switch (option)
@@ -40,7 +40,15 @@ namespace LinkedListDataStructure
                     Console.WriteLine("-----------------------------------------");
                     linkedlist.DisplayAppend();
                     break;
-                
+
+                case 4:
+                    linkedlist.Append(56);
+                    linkedlist.Append(70);
+                    linkedlist.Insertnode(30, 56);
+                    Console.WriteLine("-----------------------------------------");
+                    linkedlist.DisplayAppend();
+                    break;
+
                 default:
                     Console.WriteLine("Please choose from given options only");
                     break;
