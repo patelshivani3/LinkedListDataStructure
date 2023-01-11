@@ -137,5 +137,29 @@ namespace LinkedListDataStructure
                     Console.WriteLine("Given node {0} is not present", input);
             }
         }
+        public void Remove()     
+        {
+            Node temp1 = head;
+            Node temp2 = head;
+            if (head == null)
+            {
+                Console.WriteLine("The LinkedList is Empty");
+            }
+            else
+            {
+                temp2.next.next = temp1.next.next.next;
+            }
+        }
+        public void size()          
+        {
+            Node temp = head;
+            int count = 0;
+            while (temp != null)
+            {
+                count++;
+                temp = temp.next;
+            }
+            Console.WriteLine("\nThe size of linked list is:" + count);
+        }
     }
 }
