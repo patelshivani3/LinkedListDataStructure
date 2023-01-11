@@ -28,6 +28,13 @@ namespace LinkedListDataStructure
             }
             Console.WriteLine("{0} is added into LinkedList", newNode.data);
         }
+        public void AddFirst(int data)
+        {
+            Node newNode = new Node(data);
+            newNode.next = head;
+            head = newNode;
+            Console.WriteLine("{0} is added into LinkedList", newNode.data);
+        }
         public void Display()
         {
             Node temp = this.head;
